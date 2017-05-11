@@ -16,18 +16,19 @@ a {
   border-bottom:1px solid #FE6E4A;
 }
 
-footer {
+#footer {
   background-image: url(../assets/footer.png);
   background-size:cover;
   display: block;
   background-position: top center;
   margin-top:20px;
+  width:100%;
   padding-top:40px;
   text-align:center;
   overflow:hidden;
 }
 
-footer a {
+#footer a {
   color:white;
   border-bottom:2px solid white;
   font-size: 38px;
@@ -38,14 +39,14 @@ footer a {
 #drop {
   display:block;
 }
-footer p {
+#footer p {
   display:inline-block;
   float:left;
   font-size:13px;
   font-weight:400;
 }
 
-footer a:hover {
+#footer a:hover {
   color: black;
   border-bottom:2px solid #000;
 }
@@ -59,11 +60,11 @@ footer a:hover {
   width:100%;
 }
 
-footer li {
+#footer li {
   display:inline-block;
 }
 
-footer li a {
+#footer li a {
   border-bottom:none;
 }
 
@@ -73,7 +74,7 @@ footer li a {
   align-self:flex-end;
 }
 
-footer img {
+#footer img {
   background-repeat: no-repeat;
   background-size:contain;
   height:30px;
@@ -86,29 +87,9 @@ a:hover {
   color:#FE6E4A;
 }
 
-#uiux {
-  background:#999;
+#staywhite {
+  background-color:white;
 }
-
-#branding {
-  background:orange;
-}
-
-#visual {
-  background: #238210;
-}
-
-#else {
-  background:#92310f;
-}
-
-#contactme {
-  background: #63C5E1;
-  position:fixed;
-  top:0;
-  left:0;
-}
-
 .thumbnail {
   width:70%;
 }
@@ -131,6 +112,9 @@ a:hover {
 
 #headerbar {
   display:inline;
+  background-color:white;
+  position:relative;
+  z-index:9998;
 }
 
 #navbar {
@@ -139,6 +123,7 @@ a:hover {
 
 .herotype {
   margin-top:120px;
+  position:fixed;
 
 }
 
@@ -235,11 +220,15 @@ a:hover {
   margin: 20px;
 }
 
-
+#bottom {
+  background-color:white;
+}
 
 #projectgrid {
   padding:0;
+  background-color: white;
 }
+
 
 #projectgrid a {
   color:white;
@@ -289,16 +278,19 @@ a:hover {
 #tabmenu {
   display:block;
   width:100%;
+  background-color:white;
   text-align:center;
   padding:20px 0;
 }
 
-#tabmenu a {
+#tabmenu button {
   color:black;
   font-weight:500;
+  background-color:rgba(0,0,0,0.0);
   letter-spacing:-0.4px;
   font-size:18px;
-  border-bottom:none;
+  border:none;
+  outline:none;
   background-position: center center;
   background-size:contain;
   background-repeat: no-repeat;
@@ -307,19 +299,30 @@ a:hover {
   text-align:center;
 }
 
+#tabmenu button:hover {
+  cursor:pointer;
+}
+
 
 #tabuiux {
+  background-image:url('../assets/button1.png');
+  padding:8px;
+}
+
+#tabuiux:hover,
+#tabuiux.active {
   background-image:url('../assets/uxbutton.png');
   padding:8px;
-
 }
+
 
 #tabbranding {
   background-image:url('../assets/brandingbutton.png');
   padding:8px;
 }
 
-#tabbranding:hover {
+#tabbranding:hover,
+#tabbranding.active {
   background-image:url('../assets/brandingactive.png');
 }
 
@@ -328,7 +331,8 @@ a:hover {
   padding:8px;
 }
 
-#tabvisual:hover {
+#tabvisual:hover,
+#tabvisual.active {
   background-image:url('../assets/visualactive.png');
 }
 
@@ -337,7 +341,8 @@ a:hover {
   padding:8px;
 }
 
-#tabelse:hover {
+#tabelse:hover,
+#tabelse.active {
   background-image:url('../assets/elseactive.png');
   padding:8px;
 }
@@ -353,7 +358,10 @@ a:hover {
 #contactme {
   height:100vh;
   width:100%;
-  display:block;
+  background-color: #63C5E1;
+  position:fixed;
+  top:0;
+  z-index:1100;
   text-align:center;
 }
 
@@ -364,7 +372,7 @@ a:hover {
 #contactme p {
   font-weight:500;
   color:#264C57;
-  margin: 0 0 30px 0;
+  margin: 0 0 30px;
   padding: 0 50px;
   letter-spacing:-0.5px;
   line-height:24px;
@@ -393,9 +401,20 @@ a:hover {
 }
 
 @media only screen and (min-width: 501px) and (max-width: 750px) {
-  h1 {
-    background: red;
-  }
+
+  #projectgrid li {
+    height:210px;
+    font-size:16px;
+    font-weight:400;
+    margin: 0 0 7px 0;
+
+}
+
+#projectgrid li span{
+  font-size:20px;
+  line-height:20px;
+
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -412,15 +431,17 @@ a:hover {
   }
 
   #projectgrid li {
-    height:180px;
-    font-size:24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing:border-box;
+    background-size:cover;
+    background-position:center center;
+    height:200px;
+    font-size:17px;
     font-weight:400;
-  }
-
-  #projectgrid a {
-    font-size:23px;
-    overflow:hidden;
-    height:100%;
+    margin: 0 0 7px 0;
   }
 
   #projects {
@@ -431,6 +452,7 @@ a:hover {
     line-height:25px;
     padding:0 20px;
     width:100%;
+    font-size:17px;
   }
 
   strong, b {
@@ -438,11 +460,11 @@ a:hover {
   }
 
 
-  footer p {
+  #footer p {
     display:block;
   }
 
-  footer ul {
+  #footer ul {
     display:block;
   }
 

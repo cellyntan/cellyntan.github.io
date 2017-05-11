@@ -6,17 +6,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
   <link rel="stylesheet" href="css/simple-grid.css">
   <link rel="stylesheet" href="css/style.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/simple-scroll.js" charset="utf-8"></script>
+  <script src="js/tab-menu.js" charset="utf-8"></script>
+
 </head>
 <body>
   <div class="container" id="firstwindow">
-    <div class="row" id="headerbar">
+    <div class="row animated" id="headerbar">
       <div id="navbar">
-        <img src="images/logo.png" alt="cellyn tan logo">
+        <a href="#" style="border-bottom:none;"><img src="images/logo.png" alt="cellyn tan logo" id="logo"></a>
         <a href="#projects" class="scroll">Projects,</a>
         <a href="#" class="nav">About Me,</a>
-        <a href="javascript:;" onClick="document.getElementById('contactme').style.display='block';">Contact Me</a>
+        <a href="#contactme" id="contactmebutton">Contact Me</a>
       </div>
     </div>
 
@@ -28,7 +31,7 @@
           </p>
           <p><span style="background-image:url('assets/arrow2.png')" id="huge">Huge</span> believer of ‘Keeping it simple, stupid’</p>
           <p>Some plants thrive in full-sun. Me? Driven, <span style="background-image:url('assets/bubble2.png')" id="inquisitive">inquisitive</span> teams.</p>
-          <a href="javascript:;" onClick="document.getElementById('superpower').style.display='block';">Read a fun fact</a>
+          <a href="#superpower" id="funfact">Read a fun fact</a>
           <div id="superpower" style="display:none; font-size:15px; letter-spacing:-0.2px; font-weight:500;">Superpower: I pick up things quickly, with ape-like <span style="background-image:url('assets/lightningstrike.png')" id="lightning">learnability</span></div>
         </div>
       </div>
@@ -38,109 +41,83 @@
     </div>
 
   <div class="container" id="projects">
-      <div class="row">
-          <div id="tabmenu">
-            <a href="#uiux" id="tabuiux">UI/UX</a>
-
-            <a href="#branding" id="tabbranding">Branding</a>
-
-            <a href="#visual" id="tabvisual">Visual Design</a>
-
-            <a href="#else" id="tabelse">Everything Else</a>
-
+      <div class="row" id="staywhite">
+          <div id="tabmenu" class="scroll">
+            <button id="tabuiux" class="active animated">UI/UX</button>
+            <button id="tabbranding" class="animated">Branding</button>
+            <button id="tabvisual" class="animated">Visual Design</button>
+            <button id="tabelse" class="animated">Everything Else</button>
           </div>
 
-        <section id="uiux" >
           <ul id="projectgrid">
-            <li style="background-image:url('assets/museum-thumbnail2.png');"<a href="#">
+            <li style="background-image:url('assets/museum-thumbnail2.png');" class="uiux work">
               <a href="#"><span><strong>V&amp;A / General Assembly</strong> Designing for Lost Museum-Goers</span>
               </a>
             </li>
 
-            <li style="background-image:url('images/socialfoodie-thumbnail.png');"<a href="#">
-              <a href="#"><span><strong>Social Foodie / General Assembly</strong>Enriching the Grocery Shopping Experience</span>
+            <li style="background-image:url('images/socialfoodie-thumbnail.png');" class="uiux work">
+              <a href="#">
+              <span><strong>Social Foodie / General Assembly</strong>Enriching the Grocery Shopping Experience</span>
               </a>
             </li>
 
-            <li style="background-image:url('assets/better_thumbnail.png');"<a href="#">
+            <li style="background-image:url('assets/better_thumbnail.png');" class="uiux branding work">
               <a href="#"><span><strong>Better</strong>Simplifying Car Rentals</span>
               </a>
             </li>
 
-            <li style="background-image:url('images/superpin-thumbnil.png');"<a href="#">
+            <li style="background-image:url('images/superpin-thumbnil.png');" class="uiux work">
               <a href="#"><span><strong>SuperPin</strong>Get! Your! Stuff! Done!</span>
               </a>
             </li>
 
-            <li style="background-image:url('images/tangible-change-thumbnail.png');"<a href="#">
+            <li style="background-image:url('images/tangible-change-thumbnail.png');" class="uiux work">
               <a href="#"><span><strong>Tangible Change Singapore</strong>   Embracing Change</span>
               </a>
             </li>
 
-          </ul>
-        </section>
-
-        <section id="branding"style="display:none;">
-          <ul id="projectgrid">
-            <li style="background-image:url('assets/better_thumbnail.png');">
-              <a href="#"><span><strong>Better</strong>Simplifying Car Rentals</span>
-              </a>
-            </li>
-
-
-            <li style="background-image:url('images/telin-thumbnail.png');">
+            <li style="background-image:url('images/telin-thumbnail.png');" class="branding work">
               <a href="#"><span><strong>Telin Singapore</strong>Agility &amp; Reliability</span>
               </a>
             </li>
 
-            <li style="background-image:url('images/imperialharvest_thumbnail.png');">
+            <li style="background-image:url('images/imperialharvest_thumbnail.png');" class="branding work">
               <a href="#"><span><strong>Imperial Harvest</strong>Supporting with Expertise</span>
               </a>
             </li>
 
-            <li style="background-image:url('images/gsh-conserves-thumbnails.png');">
+            <li style="background-image:url('images/gsh-conserves-thumbnails.png');"class="branding visual work">
               <a href="#"><span><strong>GSH Conserves</strong>Spread Joy</span>
               </a>
             </li>
-          </ul>
-        </section>
 
-        <section id="visual"style="display:none;">
-          <ul id="projectgrid">
-            <li style="background-image:url('images/happiness-factory-thumbnail.png');">
+            <li style="background-image:url('images/happiness-factory-thumbnail.png');" class="visual work">
               <a href="#"><span><strong>Happiness Factory</strong>Are You Happy?</span>
               </a>
             </li>
-          </ul>
-        </section>
 
-        <section id="else"style="display:none;">
-          <ul id="projectgrid">
-            <li style="background-image:url('images/crazy-cheap-ideas.png');">
+            <li style="background-image:url('images/crazy-cheap-ideas.png');" class="else work">
               <a href="#"><span><strong>My Two Cents</strong>Crazy Cheap Ideas</span>
               </a>
             </li>
           </ul>
-        </section>
 
     </div>
   </div>
 
-<div id="contactme" style="display:none;">
-  <div class="container">
-    <a href="javascript:;" onClick="document.getElementById('contactme').style.display='none';"><div id="close">close</div></a>
-    <h2>Contact Me</h2>
-    <img src="images/smiley.png" alt="smile" width="35"></h2>
-    <p>I’m always looking for new opportunities to create, collaborate and work on anything from half-baked ideas to big stuff.</p>
-    <a href="#">Email</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Medium</a>
-  </div>
-</div>
+    <div class="container" id="contactme" style="display:none;">
+      <a href="#"><div id="close">close</div></a>
+      <h2>Contact Me</h2>
+      <img src="images/smiley.png" alt="smile" width="35"></h2>
+      <p>I’m always looking for new opportunities to create, collaborate and work on anything from half-baked ideas to big stuff.</p>
+      <a href="#">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">Medium</a>
+    </div>
 
-<footer>
-  <div class="container">
+  <div id="footer">
     <div id="drop"><a href="#">Drop me a line</a></div>
+    <div class="container">
     <div class="footerlinks">
       <p>Made by Cellyn Tan 2017!</p>
       <ul class="social">
@@ -151,7 +128,7 @@
       </ul>
     </div>
   </div>
+  </div>
 </div>
-</footer>
 </body>
 </html>
