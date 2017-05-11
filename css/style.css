@@ -1,0 +1,449 @@
+body {
+  font-family:work sans;
+  margin:0px;
+}
+
+strong, b {
+  font-weight: 500;
+  font-size:16px;
+}
+
+a {
+  font-size:15px;
+  font-weight:500;
+  color:#9B9B9B;
+  text-decoration: none;
+  border-bottom:1px solid #FE6E4A;
+}
+
+footer {
+  background-image: url(../assets/footer.png);
+  background-size:cover;
+  display: block;
+  background-position: top center;
+  margin-top:20px;
+  padding-top:40px;
+  text-align:center;
+  overflow:hidden;
+}
+
+footer a {
+  color:white;
+  border-bottom:2px solid white;
+  font-size: 38px;
+  font-weight:500;
+}
+
+
+#drop {
+  display:block;
+}
+footer p {
+  display:inline-block;
+  float:left;
+  font-size:13px;
+  font-weight:400;
+}
+
+footer a:hover {
+  color: black;
+  border-bottom:2px solid #000;
+}
+
+.footerlinks {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  overflow:hidden;
+  width:100%;
+}
+
+footer li {
+  display:inline-block;
+}
+
+footer li a {
+  border-bottom:none;
+}
+
+.social {
+  display:inline-block;
+  list-style-type: none;
+  align-self:flex-end;
+}
+
+footer img {
+  background-repeat: no-repeat;
+  background-size:contain;
+  height:30px;
+  margin-right:7px;
+  border-bottom:none;
+
+}
+
+a:hover {
+  color:#FE6E4A;
+}
+
+#uiux {
+  background:#999;
+}
+
+#branding {
+  background:orange;
+}
+
+#visual {
+  background: #238210;
+}
+
+#else {
+  background:#92310f;
+}
+
+#contactme {
+  background: #63C5E1;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+.thumbnail {
+  width:70%;
+}
+
+#lightning {
+  background-size:contain;
+  background-position:top right;
+  padding:11px 16px 0px 0;
+}
+
+#superpower {
+  margin-top:20px;
+}
+
+#hero {
+  background-color:rgba(0, 0, 0, 0.0);
+  overflow:hidden;
+  position:relative;
+}
+
+#headerbar {
+  display:inline;
+}
+
+#navbar {
+  padding:20px 0;
+}
+
+.herotype {
+  margin-top:120px;
+
+}
+
+.herotype span {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#london {
+  display:inline-block;
+  background-position: right;
+}
+
+#love {
+  display:inline-block;
+}
+
+#inquisitive {
+  display:inline-block;
+  background-position:top center;
+}
+
+#huge {
+  display:inline-block;
+  background-position: calc(100%) calc(100%px);
+  padding-left:-20px;
+}
+
+.herotype p {
+  /*width:400px;*/
+}
+
+#firstwindow {
+  overflow:hidden;
+  height:100vh;
+}
+
+
+#headerbar img {
+  vertical-align: middle;
+  display:inline-block;
+  height:50px;
+  margin-right:20px;
+}
+
+#headerbar a {
+  font-size:15px;
+  font-weight:500;
+  color:#9B9B9B;
+  margin-right:7px;
+  display:inline-block;
+  text-decoration: none;
+  border-bottom:1px solid #FE6E4A;
+}
+
+
+#headerbar a:hover {
+  color:#FE6E4A;
+}
+
+#hero p {
+  font-size:27px;
+  font-weight:500;
+  letter-spacing:-1px;
+  margin:13px 0;
+  line-height:28px;
+}
+
+.nav {
+  margin:0 auto;
+}
+/*to make container stick to the end*/
+#dabble {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  line-height: 17px;
+  left: 0;
+  background-color: white;
+  right: 0
+}
+/* for link within dabble*/
+#dabble a {
+  display: block;
+  border-top:1px solid rgba(0,0,0,0.1);
+  border-bottom: none;
+  line-height:15px;
+  vertical-align: middle;
+
+}
+
+#dabble img {
+  vertical-align: middle;
+  margin: 20px;
+}
+
+
+
+#projectgrid {
+  padding:0;
+}
+
+#projectgrid a {
+  color:white;
+  display:block;
+  position:relative;
+  width:100%;
+  font-weight:400;
+  font-size:32px;
+  overflow:hidden;
+  height:100%;
+  border-bottom:none;
+
+}
+
+#projectgrid li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  box-sizing:border-box;
+  background-size:cover;
+  background-position:center center;
+  height:320px;
+  font-size:24px;
+  font-weight:400;
+  margin: 0 0 7px 0;
+}
+
+
+
+#projectgrid span {
+  display:none;
+  width:100%;
+  line-height:40px;
+  height:100%;
+}
+
+#projectgrid li:hover span{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color:rgba(0, 0, 0, 0.6);
+}
+
+
+#tabmenu {
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:20px 0;
+}
+
+#tabmenu a {
+  color:black;
+  font-weight:500;
+  letter-spacing:-0.4px;
+  font-size:18px;
+  border-bottom:none;
+  background-position: center center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  margin-right:7px;
+  height:25px
+  text-align:center;
+}
+
+
+#tabuiux {
+  background-image:url('../assets/uxbutton.png');
+  padding:8px;
+
+}
+
+#tabbranding {
+  background-image:url('../assets/brandingbutton.png');
+  padding:8px;
+}
+
+#tabbranding:hover {
+  background-image:url('../assets/brandingactive.png');
+}
+
+#tabvisual {
+  background-image:url('../assets/button2.png');
+  padding:8px;
+}
+
+#tabvisual:hover {
+  background-image:url('../assets/visualactive.png');
+}
+
+#tabelse {
+  background-image:url('../assets/elsebutton.png');
+  padding:8px;
+}
+
+#tabelse:hover {
+  background-image:url('../assets/elseactive.png');
+  padding:8px;
+}
+
+#projects {
+  background-color: white;
+}
+#uiux {
+  background-color: white;
+}
+
+
+#contactme {
+  height:100vh;
+  width:100%;
+  display:block;
+  text-align:center;
+}
+
+.contactmecontent {
+  width:500px;
+  margin:0 auto;
+}
+#contactme p {
+  font-weight:500;
+  color:#264C57;
+  margin: 0 0 30px 0;
+  padding: 0 50px;
+  letter-spacing:-0.5px;
+  line-height:24px;
+}
+
+#contactme a {
+  font-size: 38px;
+  color:#264C57;
+  margin-right:12px;
+  letter-spacing:-1px;
+  border-bottom:2px solid white;
+}
+
+#contactme a:hover {
+  border-bottom:2px solid #264C57;
+}
+
+#close {
+  color:white;
+  font-size:15px;
+  letter-spacing:0;
+  border-bottom:none;
+  display:block;
+  weight:500;
+  text-align:center;
+}
+
+@media only screen and (min-width: 501px) and (max-width: 750px) {
+  h1 {
+    background: red;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 35px;
+    line-height:30px;
+  }
+
+  #hero p {
+    font-size:22px;
+    letter-spacing:-1px;
+    margin:7px 0;
+    line-height:28px;
+  }
+
+  #projectgrid li {
+    height:180px;
+    font-size:24px;
+    font-weight:400;
+  }
+
+  #projectgrid a {
+    font-size:23px;
+    overflow:hidden;
+    height:100%;
+  }
+
+  #projects {
+    width:100%;
+  }
+
+  #projects span {
+    line-height:25px;
+    padding:0 20px;
+    width:100%;
+  }
+
+  strong, b {
+    line-height:35px;
+  }
+
+
+  footer p {
+    display:block;
+  }
+
+  footer ul {
+    display:block;
+  }
+
+}
